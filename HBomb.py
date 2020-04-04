@@ -1,37 +1,22 @@
 #!/usr/bin/env python
+from datetime import datetime
 import os
+import hashlib
 import sys
-import os
+import time
+import threading
+import string
+import random
+import base64
+import urllib.request
+import urllib.parse
 import subprocess
 
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
 Endc = '\033[0m'
+verl = open(".version", 'r').read()
 
-def checkinternet():
-    res = False
-    try:
-        requests.get('https://www.google.com', verify=True)
-        res = False
-    except Exception:
-        res = True
-    if res:
-        print("\n\n\tYour Internet Speed is Slow or You Are Using Proxies...")
-        print('\t\tHBomb Will Stop Now...\n\n')
-        banner()
-        exit()
-        
-def update():
-    stuff_to_update = ['HBomb.py', '.version']
-    for fl in stuff_to_update:
-        dat = urllib.request.urlopen(
-            "" + fl).read()
-        file = open(fl, 'wb')
-        file.write(dat)
-        file.close()
-    print('\n\t\tUpdated Successfull !!!!')
-    print('\tPlease Run The Script Again...')
-    exit()
 
 def clr():
     if os.name == 'nt':
@@ -57,7 +42,7 @@ def banner():
 
                ""","""
 ----------------   --------------------
-| KLS  Project |   | Version : 2020.4 |
+| KLS  Project |   | Version : """,verl,""" |
 ----------------   --------------------
 
 \tCreated by Honey Pots...
@@ -65,7 +50,7 @@ def banner():
 -------------------------------------------- 
 
 """
-    print(Red+logo[0]+Blue+logo[1])
+    print(Red+logo[0]+Blue+logo[1]+logo[2]+logo[3])
 
 def home():
 	print(Red +"""       [ Main Menu ] \n"""+ Blue + """
@@ -76,6 +61,58 @@ def home():
 [5] Help
 [6] Exit 
 """)
+
+def checkinternet():
+    res = False
+    try:
+        requests.get('https://www.google.com', verify=True)
+        res = False
+    except Exception:
+        res = True
+    if res:
+        print("\n\n\tYour Internet Speed is Slow ...")
+        print('\t\tTBomb Will Stop Now...\n\n')
+        banner()
+        exit()
+
+
+def update():
+    stuff_to_update = ['HBomb.py','ml.py','smcl.py', '.version']
+    for fl in stuff_to_update:
+        dat = urllib.request.urlopen(
+            "https://raw.githubusercontent.com/HoneyPots0/HBomb/master/" + fl).read()
+        file = open(fl, 'wb')
+        file.write(dat)
+        file.close()
+    print('\n\t   Updated Successfull !!!')
+    input('\n\tPress Enter Run The Script Again...')
+    subprocess.call([sys.executable, 'HBomb.py'])
+
+clr()
+banner()
+try:
+    urllib.request.urlopen('https://www.google.com')
+except Exception:
+    print("You are not connected To Internet!!!")
+    print("\tPlease Connect To Internet To Continue...\n")
+    input('Exiting....\n Press Enter To Continue....')
+    exit()
+
+print('\t   Checking For Updates...')
+ver = urllib.request.urlopen(
+    "https://raw.githubusercontent.com/HoneyPots0/HBomb/master/.version").read().decode('utf-8')
+verl = ''
+try:
+    verl = open(".version", 'r').read()
+except Exception:
+    pass
+if ver != verl:
+    print('\n\tNew Version Available : ', ver)
+    print('\n\t  HBomb Tool Start Updating...')
+    update()
+print("\n\tYour Version is Up-To-Date")
+print('\n\t     Starting HBomb...\n')
+time.sleep(4)
 
 clr()
 banner()
