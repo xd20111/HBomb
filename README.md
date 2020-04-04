@@ -21,21 +21,26 @@ To use the HBomb type the following commands in Termux:
 ```
 pkg install git
 pkg install python
-git clone https://github.com/TheSpeedX/TBomb.git
-cd TBomb
-chmod +x TBomb.sh
-./TBomb.sh
+pkg install pip
+git clone https://github.com/HoneyPots0/HBomb.git
+cd HBomb
+pip install -r requirements.txt
+chmod +x HBomb.py
+python HBomb.py
 ```
 
 ### > For Linux:
 
 To use the HBomb type the following commands in Linux terminal:
 ```
-sudo apt install git
-git clone https://github.com/TheSpeedX/TBomb.git
-cd TBomb
-chmod +x TBomb.sh
-sudo bash TBomb.sh
+sudo apt-get install git
+sudo apt-get install python3
+sudo apt-get install pip3
+git clone https://github.com/HoneyPots0/HBomb.git
+cd HBomb
+pip3 install -r requirements.txt
+chmod +x HBomb.py
+python3 HBomb.py
 ```
 
 ### > For macOS:
@@ -52,6 +57,7 @@ brew install git
 brew install python3
 sudo easy_install pip
 sudo pip install --upgrade pip
-git clone https://github.com/TheSpeedX/TBomb.git
+git clone https://github.com/HoneyPots0/HBomb.git
 cd TBomb
-chmod +x TBomb.sh
+chmod +x HBomb.py
+python3 HBomb.py
