@@ -839,6 +839,8 @@ if nm == 0:
     while True:
         ci += 1
         l = count_inf
+        clr()
+        banner()
         print("    Total Number of Requests Sent : ", l)
         if int(l) > maxlim:
             print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
