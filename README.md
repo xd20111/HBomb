@@ -3,13 +3,14 @@
 
 ## Features:
 
-- Lots of integrated SMS/call APIs
+- Mail Bombing
+- Call Bombing
+- SMS Bombing
 - Unlimited (Limited against abusing) and super-fast bombing
 - International bombing available
-- Call bombing
 - Frequent updates
 - Automatic updating mechanism
-- Easy to use and embed in code
+- Easy to use 
 
 ## Usage:
 
