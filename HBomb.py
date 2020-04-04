@@ -85,7 +85,7 @@ def update():
         file.write(dat)
         file.close()
     print('\n\t   Updated Successfull !!!')
-    input('\n\tPress Enter Run The Script Again...')
+    input('\n\tPress Enter To Run Again HBomb Tool ...')
     subprocess.call([sys.executable, 'HBomb.py'])
 
 clr()
@@ -93,10 +93,10 @@ banner()
 try:
     urllib.request.urlopen('https://www.google.com')
 except Exception:
-    print("You are not connected To Internet!!!")
-    print("\tPlease Connect To Internet To Continue...\n")
-    input('Exiting....\n Press Enter To Continue....')
-    exit()
+    print("\t You are not connected To Internet!!!")
+    print("\n\tPlease Connect To Internet To Continue...\n")
+    input('\t Press Enter To Run Again HBomb Tool ...')
+    subprocess.call([sys.executable, 'HBomb.py'])
 
 print('\t   Checking For Updates...')
 ver = urllib.request.urlopen(
