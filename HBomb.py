@@ -85,7 +85,7 @@ def update():
         file.write(dat)
         file.close()
     print('\n\t    Updated Successfull !!!')
-    input('\n\tPress Enter To Run Again HBomb Tool ...')
+    input('\n\tPress Enter To Run Again HBomb Tool: ')
     subprocess.call([sys.executable, 'HBomb.py'])
 
 clr()
