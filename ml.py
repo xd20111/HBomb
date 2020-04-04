@@ -28,7 +28,6 @@ def banner():
     
     clr()
     logo="""
-
  ██░ ██  ▄▄▄▄    ▒█████   ███▄ ▄███▓ ▄▄▄▄   
 ▓██░ ██▒▓█████▄ ▒██▒  ██▒▓██▒▀█▀ ██▒▓█████▄ 
 ▒██▀▀██░▒██▒ ▄██▒██░  ██▒▓██    ▓██░▒██▒ ▄██
@@ -39,19 +38,15 @@ def banner():
  ░  ░░ ░ ░    ░ ░ ░ ░ ▒  ░      ░    ░    ░ 
  ░  ░  ░ ░          ░ ░         ░    ░      
               ░                           ░
-
-
                ""","""
 ----------------   --------------------
-| KLS  Project |   | Version : 2020.4 |
+| KLS  Project |   | Version : """,verl,""" |
 ----------------   --------------------
-
 \tCreated by Honey Pots...
-
 -------------------------------------------- 
-
 """
-    print(Red+logo[0]+Blue+logo[1])
+    print(Red+logo[0]+Blue+logo[1]+logo[2]+logo[3])
+
 
 def mail():
     print(Red+ "\tMail Bombing \n" +Blue)
