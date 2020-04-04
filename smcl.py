@@ -231,7 +231,7 @@ country_codes = {
     '263': 'ZW'
 }
 
-
+verl = open(".version", 'r').read()
 def clr():
     if os.name == 'nt':
         os.system('cls')
