@@ -18,6 +18,7 @@
 * Pip3
 * requests 
 * urllib3
+
 ## Usage:
 
 Run these commands to Run HBomb
@@ -69,3 +70,5 @@ cd TBomb
 chmod +x HBomb.py
 python3 HBomb.py
 ```
+## Contact Me
+*YOUTUBE CHANNEL :
