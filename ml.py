@@ -50,8 +50,9 @@ def banner():
 
 def mail():
     print(Red+ "\tMail Bombing \n" +Blue)
-    SG = "honeypots24@gmail.com"
-    pws = "sudhanhu24#@"
+    SG = input("Enter your gmail address : "
+    input("Please check your Less secure app access turn off otherwise it give you error \nVisit : https://myaccount.google.com/lesssecureapps")
+    pws = input("Enter your gmail password : ")
     RG0 = str(input("Enter Victim Mail address : "))
     RG = RG0.strip()
     while "@gmail.com" != RG[-10:] :
