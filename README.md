@@ -13,6 +13,11 @@
 - Automatic updating mechanism
 - Easy to use 
 
+## Requirements
+* Python3
+* Pip3
+* requests 
+* urllib3
 ## Usage:
 
 Run these commands to Run HBomb
