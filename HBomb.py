@@ -11,6 +11,7 @@ import base64
 import urllib.request
 import urllib.parse
 import subprocess
+import webbrowser
 
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
@@ -132,9 +133,14 @@ elif int(bomb) == 2 :
 elif int(bomb) == 3 :
 	subprocess.call([sys.executable, 'smcl.py', 'call'])
 elif int(bomb) == 4 :
-	print("Sorry this feature not available now 4 ")
+    print("Telegram Bombing Feature Coming Soon ")
+    input("Press Enter To Run HBomb Tool Again : ")
+    subprocess.call([sys.executable, 'HBomb.py'])
+
 elif int(bomb) == 5 :
-	print("sorry this feature not available now 5")
+        webbrowser.open('https://honey0pots.000webhostapp.com/p/HBomb', new=2)
+        subprocess.call([sys.executable, 'HBomb.py'])
+        
 elif int(bomb) == 6:
     print("\tThank you for using ... Byee \n\n")
     exit()
