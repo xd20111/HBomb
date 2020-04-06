@@ -116,7 +116,6 @@ print('\n\t     Starting HBomb...\n')
 time.sleep(4)
 
 clr()
-checkinternet()
 banner()
 home()
 bomb = input("Choose one options : ")
@@ -148,9 +147,31 @@ elif int(bomb) == 6:
     print("\tThank you for using ... Byee \n\n")
     exit()
 else :
-    print("Invalid!")
     home()
     bomb = input("\aInvalid ! Choose one options  [ 1 to 6]: ")
+    clr()
+    banner()
+    if int(bomb) == 1 : 
+        subprocess.call([sys.executable, 'ml.py'])
+    elif int(bomb) == 2 :
+        subprocess.call([sys.executable, 'smcl.py'])
+    elif int(bomb) == 3 :
+        subprocess.call([sys.executable, 'smcl.py', 'call'])
+    elif int(bomb) == 4 :
+        print("Telegram Bombing Feature Coming Soon ")
+        input("Press Enter To Run HBomb Tool Again : ")
+        subprocess.call([sys.executable, 'HBomb.py'])
 
+    elif int(bomb) == 5 :
+            webbrowser.open('https://honey0pots.000webhostapp.com/p/HBomb', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/p/HBomb/")
+            input("\nPress Enter To Run HBomb Tool Again : ")
+            subprocess.call([sys.executable, 'HBomb.py'])
 
+    elif int(bomb) == 6:
+        print("\tThank you for using ... Byee \n\n")
+        exit()
+    else :
+        home()
+        bomb = input("\aInvalid ! Choose one options  [ 1 to 6]: ")
 

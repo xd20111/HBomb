@@ -252,9 +252,9 @@ def banner():
  ░  ░  ░ ░          ░ ░         ░    ░      
               ░                           ░
                ""","""
-----------------   --------------------
+----------------   ------------------------
 | KLS  Project |   | Version : """,verl,""" |
-----------------   --------------------
+----------------   ------------------------
 \tCreated by Honey Pots...
 -------------------------------------------- 
 """
@@ -730,6 +730,8 @@ def start(target, counter, delay, ch, cc):
 
 
 while True:
+    clr()
+    banner()
     pn = ""
     cc = input("Enter Your Country Code (Without + | Ex : 91 | ): ")
     if '+' in cc:
