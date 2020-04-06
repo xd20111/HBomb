@@ -10,9 +10,10 @@
 - Mail Bombing
 - Call Bombing
 - SMS Bombing
-- Unlimited (Limited against abusing) and super-fast bombing
+- Unlimited  and super-fast bombing (against abusing )
 - International bombing available
-- Frequent updates
+- Community Support 
+- fully Help 
 - Automatic updating mechanism
 - Easy to use 
 
