@@ -59,7 +59,7 @@ def mail():
         SG = input("\aInvalid!!! Mail Please Enter your mail Again  : ")
     while int(len(SG)) < 10 : 
         SG= input("\aInvalid!!! Mail Please Enter your mail Again  : ")
-    Er = input("\n\nPlease check your \"Less secure app access turn off\" \n\n\tOtherwise it give you error \n\nVisit : https://myaccount.google.com/lesssecureapps : ")
+    Er = input("\n\nPlease check your \"Less secure app access turn : ON\" \n\n\tOtherwise it give you error \n\nVisit : https://myaccount.google.com/lesssecureapps : ")
     pws = input("\nEnter your gmail password : ")
     RG = str(input("Enter Victim Mail address : "))
     num = input("Enter Number of Mail : ")
