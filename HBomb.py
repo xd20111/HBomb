@@ -94,9 +94,9 @@ banner()
 try:
     urllib.request.urlopen('https://www.google.com')
 except Exception:
-    print("\t You are not connected To Internet!!!")
-    print("\n\tPlease Connect To Internet To Continue...\n")
-    input('\t Press Enter To Run Again HBomb Tool ...')
+    print("   You are not connected To Internet!!!")
+    print("\n  Please Connect To Internet To Continue...\n")
+    input('   Press Enter To Run Again HBomb Tool ...')
     subprocess.call([sys.executable, 'HBomb.py'])
 
 print('\t   Checking For Updates...')

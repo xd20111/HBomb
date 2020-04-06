@@ -10,7 +10,8 @@ import random
 import base64
 import urllib.request
 import urllib.parse
-
+import subprocess
+import webbrowser
 
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
@@ -727,8 +728,15 @@ def start(target, counter, delay, ch, cc):
     os.system('rm *.xxx* > /dev/null 2>&1')
     banner()
     exit()
-
-
+banner()
+print(Blue)
+try:
+    urllib.request.urlopen('https://www.google.com')
+except Exception:
+    print("   You are not connected To Internet!!!")
+    print("\n  Please Connect To Internet To Continue...\n")
+    input('   Press Enter To Run Again HBomb Tool...')
+    subprocess.call([sys.executable, 'HBomb.py'])
 while True:
     clr()
     banner()

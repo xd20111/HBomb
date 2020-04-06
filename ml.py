@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+from datetime import datetime
+import os
+import hashlib
+import sys
+import time
+import threading
+import string
+import random
+import base64
+import urllib.request
+import urllib.parse
+import subprocess
+import webbrowser
 import smtplib
 import sys
 import os
@@ -8,19 +22,7 @@ Blue= '\033[1;36m'
 Endc = '\033[0m'
 verl = open(".version", 'r').read()
 
-def checkinternet():
-    res = False
-    try:
-        requests.get('https://www.google.com', verify=True)
-        res = False
-    except Exception:
-        res = True
-    if res:
-        print("\n\n\tYour Internet Speed is Slow or You Are Using Proxies...")
-        print('\t\tHBomb Will Stop Now...\n\n')
 
-        banner()
-        exit()
 
 def clr():
     if os.name == 'nt':
@@ -146,9 +148,15 @@ def mail():
             print("\n\t\t Please Wait Bombing Start...")
             continue         
         pass
-    
+clr()
 banner()
-
+try:
+    urllib.request.urlopen('https://www.google.com')
+except Exception:
+    print("   You are not connected To Internet!!!")
+    print("\n  Please Connect To Internet To Continue...\n")
+    input('   Press Enter To Use Again Mail Bombing ...')
+    subprocess.call([sys.executable, 'ml.py'])
 mail()
 
 # honeypots24@gmail.com
