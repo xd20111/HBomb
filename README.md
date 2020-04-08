@@ -33,7 +33,6 @@ To use the HBomb type the following commands in Termux:
 ```
 pkg install git
 pkg install python
-pkg install pip
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
 pip install -r requirements.txt
