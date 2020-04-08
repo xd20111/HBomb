@@ -788,7 +788,6 @@ while True:
         pass
     pn = remsp(pn)
     break
-
 type = 0
 try:
     if sys.argv[1] == "call":
@@ -800,6 +799,7 @@ if type == 1:
     while not nm.isdigit() :
         nm = input("Invalid Number !!! Enter Number of Calls To Send(Maximum 100): ")
         pass
+    nm = int(nm)
     if nm > 100:
         print("\t\tYou Have Entered " + str(nm) +
               ".\n\tNormalizing Value To 100")
@@ -808,7 +808,7 @@ if type == 1:
     while not dl.isdigit():
         dl = input("Invalid !!! Enter Delay time (in seconds) [Recommended 10 sec ] : ")
         pass
-
+    dl = float(dl)
 elif type == 0:
     if cc == "91":
         nm = input("Enter Number of Messages To Send : ")
