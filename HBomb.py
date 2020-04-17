@@ -163,7 +163,7 @@ else :
         subprocess.call([sys.executable, 'HBomb.py'])
 
     elif int(bomb) == 5 :
-            webbrowser.open('https://honey0pots.000webhostapp.com/p/HBomb', new=2)
+            webbrowser.open('https://honey0pots.000webhostapp.com/kls/HBomb', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/p/HBomb/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'HBomb.py'])
