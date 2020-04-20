@@ -19,7 +19,6 @@
 
 ## Requirements
 * Python3
-* Pip3
 * requests 
 * urllib3
 
