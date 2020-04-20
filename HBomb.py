@@ -58,7 +58,7 @@ def home():
 [1] Mail Bombing
 [2] SMS Bombing 
 [3] Call Bombing 
-[4] Telegram Massage Bombing
+[4] Restart
 [5] Help
 [6] Exit 
 """)
@@ -133,8 +133,6 @@ elif int(bomb) == 2 :
 elif int(bomb) == 3 :
 	subprocess.call([sys.executable, 'smcl.py', 'call'])
 elif int(bomb) == 4 :
-    print("Telegram Bombing Feature Coming Soon ")
-    input("Press Enter To Run HBomb Tool Again : ")
     subprocess.call([sys.executable, 'HBomb.py'])
 
 elif int(bomb) == 5 :
