@@ -92,7 +92,7 @@ def update():
 clr()
 banner()
 try:
-    urllib.request.urlopen('https://www.google.com')
+    urllib.request.urlopen('https://honey0pots.000webhostapp.com/KLS/HBomb/active-user-Hbomb.htm')
 except Exception:
     print("   You are not connected To Internet!!!")
     print("\n  Please Connect To Internet To Continue...\n")
