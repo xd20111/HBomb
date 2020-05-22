@@ -253,9 +253,9 @@ def banner():
  ░  ░  ░ ░          ░ ░         ░    ░      
               ░                           ░
                ""","""
-----------------   ------------------------
+----------------   ----------------------
 | KLS  Project |   | Version : """,verl,""" |
-----------------   ------------------------
+----------------   ----------------------
 \t\nCreated by Honey Pots...
 \n-------------------------------------------- 
 """
@@ -858,6 +858,7 @@ if not cc.strip() == "91":
     ch = [0, 14, 15, 16]
     start(pn, nm, dl, ch, str(cc))
     exit()
+
 ch = [i for i in range(17)]
 cbomb = False
 if pn.strip() == '' or dl <= 0 or nm < 0:
@@ -874,32 +875,37 @@ if cbomb:
     start(pn, nm, dl, chl, str(cc))
     exit()
 if nm == 0:
-    nt = int(input("\tNumber Of Threads(10 to 20) : "))
+    nt = int(input("Enter Number Of Threads(10 to 20) : "))
     if nt <= 0 or nt >= 30:
         print('\tHBomb Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
-    print("\n\nPlease Remember That This Is in Experimental Stage And Is Incredibly Fast...")
+        pass
+    print("\n\n-------------------------------------------- ")
+    print("\nPlease Remember That This Is in \n\nExperimental Stage And Is Incredibly Fast...")
+    print("\n-------------------------------------------- ")
     t = [None] * nt
-    print(Blue)
-    print("-------------------------------------------- ")
-    print("             Target Number       : +91", pn)
-    print("             Number of Threads   : ", nt)
-    print("             Delay               : ", dl)
-    print("-------------------------------------------- ")
-    input('\n\nPress CTRL+Z To STOP Bomber... \nPress Enter To Start Bomber...\n')
+    input('\n\n Press Enter To Start Bombing...')
     os.system('rm *.xxx* > /dev/null 2>&1')
-    print("\n\nStarting Bomb....")
+    print("\n\n         Starting Bomb....")
     for i in range(nt):
         t[i] = threading.Thread(target=infinite, args=(pn, dl, ch, maxlim,))
         t[i].daemon = True
         t[i].start()
-    time.sleep(2)
+    time.sleep(1)
     ci = 0
     while True:
         ci += 1
         l = count_inf
         clr()
         banner()
+        print(Blue)
+        print("-------------------------------------------- ")
+        print(Red +"                  Details "+Blue)
+        print("      Target Number       : +91", pn)
+        print("      Number of Threads   : ", nt)
+        print("      Delay               : ", dl)
         print("    Total Number of Requests Sent : ", l)
+        print("-------------------------------------------- ")
+        print("\n        Press CTRL+Z To STOP Bombing... ")
         if int(l) > maxlim:
             print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
                   str(maxlim) + ' SMS At Once...\n\n')
