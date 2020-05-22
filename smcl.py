@@ -256,7 +256,7 @@ def banner():
 ----------------   ----------------------
 | KLS  Project |   | Version : """,verl,""" |
 ----------------   ----------------------
-\t\nCreated by Honey Pots...
+\n\tCreated by Honey Pots...
 \n-------------------------------------------- 
 """
     print(Red+logo[0]+Blue+logo[1]+logo[2]+logo[3])
