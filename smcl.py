@@ -800,10 +800,16 @@ if type == 1:
         nm = input("Invalid Number !!! Enter Number of Calls To Send(Maximum 100): ")
         pass
     nm = int(nm)
-    if nm > 100:
+
+    if nm > 100000:
         print("\t\tYou Have Entered " + str(nm) +
               ".\n\tNormalizing Value To 100")
-        nm = 100
+        nm = 100000
+    elif nm == 0 :
+        nm = 99999
+    else:
+        pass
+
     dl = input("Enter Delay time (in seconds) [Recommended 10 sec ] : ")
     while not dl.isdigit():
         dl = input("Invalid !!! Enter Delay time (in seconds) [Recommended 10 sec ] : ")
@@ -832,7 +838,7 @@ maxlim = 0
 nm = int(nm)
 dl = float(dl)
 if cc == "91":
-    maxlim = 500
+    maxlim = 99999999
 else:
     maxlim = 100
 if int(nm) > maxlim:
