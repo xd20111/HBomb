@@ -16,7 +16,7 @@ import webbrowser
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
 Endc = '\033[0m'
-verl = open(".version", 'r').read()
+verl = open("/opt/HBomb/.version", 'r').read()
 
 
 def clr():
@@ -92,7 +92,7 @@ def update():
 clr()
 banner()
 try:
-    urllib.request.urlopen('https://honey-pots.000webhostapp.com')
+    urllib.request.urlopen('https://www.google.com')
 except Exception:
     print("   You are not connected To Internet!!!")
     print("\n  Please Connect To Internet To Continue...\n")
@@ -104,7 +104,7 @@ ver = urllib.request.urlopen(
     "https://raw.githubusercontent.com/HoneyPots0/HBomb/master/.version").read().decode('utf-8')
 verl = ''
 try:
-    verl = open(".version", 'r').read()
+    verl = open("/opt/HBomb/.version", 'r').read()
 except Exception:
     pass
 if ver != verl:
@@ -127,13 +127,13 @@ while int(bomb) > 6 :
 clr()
 banner()
 if int(bomb) == 1 : 
-    subprocess.call([sys.executable, 'ml.py'])
+    subprocess.call([sys.executable, '/opt/HBomb/ml.py'])
 elif int(bomb) == 2 :
-	subprocess.call([sys.executable, 'smcl.py'])
+	subprocess.call([sys.executable, '/opt/HBomb/smcl.py'])
 elif int(bomb) == 3 :
-	subprocess.call([sys.executable, 'smcl.py', 'call'])
+	subprocess.call([sys.executable, '/opt/HBomb/smcl.py', 'call'])
 elif int(bomb) == 4 :
-    subprocess.call([sys.executable, 'HBomb.py'])
+    subprocess.call([sys.executable, '/opt/HBomb/HBomb.py'])
 
 elif int(bomb) == 5 :
         webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
@@ -150,19 +150,19 @@ else :
     clr()
     banner()
     if int(bomb) == 1 : 
-        subprocess.call([sys.executable, 'ml.py'])
+        subprocess.call([sys.executable, '/opt/HBomb/ml.py'])
     elif int(bomb) == 2 :
-        subprocess.call([sys.executable, 'smcl.py'])
+        subprocess.call([sys.executable, '/opt/HBomb/smcl.py'])
     elif int(bomb) == 3 :
-        subprocess.call([sys.executable, 'smcl.py', 'call'])
+        subprocess.call([sys.executable, '/opt/HBomb/smcl.py', 'call'])
     elif int(bomb) == 4 :
-        subprocess.call([sys.executable, 'HBomb.py'])
+        subprocess.call([sys.executable, '/opt/HBomb/HBomb.py'])
 
     elif int(bomb) == 5 :
             webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
             input("\nPress Enter To Run HBomb Tool Again : ")
-            subprocess.call([sys.executable, 'HBomb.py'])
+            subprocess.call([sys.executable, '/opt/HBomb/HBomb.py'])
 
     elif int(bomb) == 6:
         print("\tThank you for using ... Byee \n\n")

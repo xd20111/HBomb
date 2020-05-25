@@ -232,7 +232,7 @@ country_codes = {
     '263': 'ZW'
 }
 
-verl = open(".version", 'r').read()
+verl = open("/opt/HBomb/.version", 'r').read()
 def clr():
     if os.name == 'nt':
         os.system('cls')
@@ -726,7 +726,7 @@ def start(target, counter, delay, ch, cc):
     os.system('rm *.xxx* > /dev/null 2>&1')
     banner()
     input("Press Enter run Again Hbomb Tool : ")
-    subprocess.call([sys.executable, 'HBomb.py'])
+    subprocess.call([sys.executable, '/opt/HBomb/HBomb.py'])
 
 
 def remsp(num):
@@ -742,7 +742,7 @@ except Exception:
     print("   You are not connected To Internet!!!")
     print("\n  Please Connect To Internet To Continue...\n")
     input('   Press Enter To Run Again HBomb Tool...')
-    subprocess.call([sys.executable, 'HBomb.py'])
+    subprocess.call([sys.executable, '/opt/HBomb/HBomb.py'])
 while True:
     clr()
     banner()
