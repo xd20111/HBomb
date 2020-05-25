@@ -78,7 +78,7 @@ def checkinternet():
 
 
 def update():
-    stuff_to_update = ['HBomb.py','ml.py','smcl.py', '.version']
+    stuff_to_update = ['HBomb.py','ml.py','smcl.py', '.version' , 'install']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
             "https://raw.githubusercontent.com/HoneyPots0/HBomb/master/" + fl).read()
