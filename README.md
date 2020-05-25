@@ -1,4 +1,4 @@
-<h1 align="center">HBomb v2020.5</h1>
+<h1 align="center">HBomb v2020.5a</h1>
 <h5 align="right">Created By Honey Pots</h5>
 <p align="center">An open-source SMS , Call &  Mail bomber for   Window , Linux , MacOS And Termux</p><br>
 
@@ -34,9 +34,8 @@ pkg install git
 pkg install python
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
-pip install -r requirements.txt
-chmod +x HBomb.py
-python HBomb.py
+chmod +x install 
+./install
 ```
 
 ### > For Linux:
@@ -48,9 +47,8 @@ sudo apt-get install python3
 sudo apt-get install pip3
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
-pip3 install -r requirements.txt
-chmod +x HBomb.py
-python3 HBomb.py
+chmod +x install 
+./install
 ```
 
 ### > For macOS:
@@ -68,9 +66,9 @@ brew install python3
 sudo easy_install pip
 sudo pip install --upgrade pip
 git clone https://github.com/HoneyPots0/HBomb.git
-cd TBomb
-chmod +x HBomb.py
-python3 HBomb.py
+cd HBomb
+chmod +x install 
+./install
 ```
 ## Contact Me
 * <b>YOUTUBE CHANNEL : https://www.youtube.com/c/honeypots0 </b>
