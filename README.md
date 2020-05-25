@@ -36,7 +36,7 @@ git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
 chmod +x install 
 ./install
-hbomb # For Run The Tool
+hbomb      #For Run The Tool
 ```
 
 ### > For Linux:
@@ -50,7 +50,7 @@ git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
 chmod +x install 
 ./install
-hbomb # For Run The Tool
+hbomb   #For Run The Tool
 ```
 
 ### > For macOS:
@@ -69,6 +69,7 @@ sudo easy_install pip
 sudo pip install --upgrade pip
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
+pip3 install -r requirements.txt
 python3 Hbomb.py
 ```
 ## Contact Me
