@@ -59,7 +59,7 @@ def home():
 [1] Mail Bombing
 [2] SMS Bombing 
 [3] Call Bombing 
-[4] Restart
+[4] Donate For This Project
 [5] Help
 [6] Exit 
 """)
@@ -134,8 +134,11 @@ elif int(bomb) == 2 :
 elif int(bomb) == 3 :
 	subprocess.call([sys.executable, 'smcl.py', 'call'])
 elif int(bomb) == 4 :
-    subprocess.call([sys.executable, 'HBomb.py'])
-
+            webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots0/")
+            input("\nPress Enter To Run HBomb Tool Again : ")
+            subprocess.call([sys.executable, 'HBomb.py'])
+	
 elif int(bomb) == 5 :
         webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
         print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
@@ -157,8 +160,10 @@ else :
     elif int(bomb) == 3 :
         subprocess.call([sys.executable, 'smcl.py', 'call'])
     elif int(bomb) == 4 :
-        subprocess.call([sys.executable, 'HBomb.py'])
-
+            webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots0/")
+            input("\nPress Enter To Run HBomb Tool Again : ")
+            subprocess.call([sys.executable, 'HBomb.py'])
     elif int(bomb) == 5 :
             webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
