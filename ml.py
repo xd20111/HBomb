@@ -20,7 +20,7 @@ import subprocess
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
 Endc = '\033[0m'
-verl = open("/opt/HBomb/.version", 'r').read()
+verl = open(".version", 'r').read()
 
 
 
@@ -86,7 +86,7 @@ def mail():
           banner() 
           print(str(num) + " Mail Send Successful To  " + str(RG))
           input("\n\nPress Enter To Run Again HBomb Tool : ")  
-          subprocess.call([sys.executable, '/opt/HBomb/HBomb.py']) 
+          subprocess.call([sys.executable, 'HBomb.py']) 
         except :
             print("Victim mail not correct !!!")
             RG = str(input("Enter Victim Mail address : "))
@@ -101,5 +101,5 @@ except Exception:
     print("   You are not connected To Internet!!!")
     print("\n  Please Connect To Internet To Continue...\n")
     input('   Press Enter To Use Again Mail Bombing ...')
-    subprocess.call([sys.executable, '/opt/HBomb/ml.py'])
+    subprocess.call([sys.executable, 'ml.py'])
 mail()
