@@ -39,7 +39,7 @@ cd ..
 cp -r HBomb /opt  
 touch /bin/hbomb  
 chmod +x /bin/hbomb 
-echo "python3 /opt/HBomb/HBomb.py" > /bin/hbomb
+echo "cd /opt/HBomb && python3 /opt/HBomb/HBomb.py" > /bin/hbomb
 echo "               "     &&  sleep 1 
 echo " HBomb Tool Installed Successfully"
 echo ""
