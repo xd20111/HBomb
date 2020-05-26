@@ -16,7 +16,11 @@ import webbrowser
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
 Endc = '\033[0m'
-verl = open("/opt/HBomb/.version", 'r').read()
+
+try:
+    verl = open("/opt/HBomb/.version", 'r').read()
+except Exception:
+    verl = open(".version", 'r').read()
 
 
 def clr():
