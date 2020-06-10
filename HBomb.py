@@ -135,7 +135,7 @@ elif int(bomb) == 3 :
 	subprocess.call([sys.executable, 'smcl.py', 'call'])
 elif int(bomb) == 4 :
             webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots0/")
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'HBomb.py'])
 	
@@ -161,7 +161,7 @@ else :
         subprocess.call([sys.executable, 'smcl.py', 'call'])
     elif int(bomb) == 4 :
             webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots0/")
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'HBomb.py'])
     elif int(bomb) == 5 :
