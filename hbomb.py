@@ -79,7 +79,7 @@ def checkinternet():
 
 
 def update():
-    stuff_to_update = ['HBomb.py','ml.py','smcl.py', '.version' , 'install']
+    stuff_to_update = ['hbomb.py','ml.py','smcl.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
             "https://raw.githubusercontent.com/HoneyPots0/HBomb/master/" + fl).read()
@@ -88,7 +88,7 @@ def update():
         file.close()
     print('\n\t    Updated Successfull !!!')
     input('\n\tPress Enter To Run Again HBomb Tool: ')
-    subprocess.call([sys.executable, 'HBomb.py'])
+    subprocess.call([sys.executable, 'hbomb.py'])
 
 clr()
 banner()
@@ -98,7 +98,7 @@ except Exception:
     print("   You are not connected To Internet!!!")
     print("\n  Please Connect To Internet To Continue...\n")
     input('   Press Enter To Run Again HBomb Tool ...')
-    subprocess.call([sys.executable, 'HBomb.py'])
+    subprocess.call([sys.executable, 'hbomb.py'])
 
 print('\t    Checking For Updates...')
 ver = urllib.request.urlopen(
@@ -137,13 +137,13 @@ elif int(bomb) == 4 :
             webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
             input("\nPress Enter To Run HBomb Tool Again : ")
-            subprocess.call([sys.executable, 'HBomb.py'])
+            subprocess.call([sys.executable, 'hbomb.py'])
 	
 elif int(bomb) == 5 :
         webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
         print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
         input("\nPress Enter To Run HBomb Tool Again : ")
-        subprocess.call([sys.executable, 'HBomb.py'])
+        subprocess.call([sys.executable, 'hbomb.py'])
 
 elif int(bomb) == 6:
     print("\tThank you for using ... Byee \n\n")
@@ -163,12 +163,12 @@ else :
             webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
             input("\nPress Enter To Run HBomb Tool Again : ")
-            subprocess.call([sys.executable, 'HBomb.py'])
+            subprocess.call([sys.executable, 'hbomb.py'])
     elif int(bomb) == 5 :
             webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
             print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
             input("\nPress Enter To Run HBomb Tool Again : ")
-            subprocess.call([sys.executable, 'HBomb.py'])
+            subprocess.call([sys.executable, 'hbomb.py'])
 
     elif int(bomb) == 6:
         print("\tThank you for using ... Byee \n\n")
