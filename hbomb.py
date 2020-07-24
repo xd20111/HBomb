@@ -140,8 +140,8 @@ elif int(bomb) == 4 :
             subprocess.call([sys.executable, 'hbomb.py'])
 	
 elif int(bomb) == 5 :
-        webbrowser.open('https://honeypots.tech/p/HBomb/', new=2)
-        print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/")
+        webbrowser.open('https://honeypots.tech/p/HBomb/help', new=2)
+        print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/help")
         input("\nPress Enter To Run HBomb Tool Again : ")
         subprocess.call([sys.executable, 'hbomb.py'])
 
@@ -165,8 +165,8 @@ else :
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'hbomb.py'])
     elif int(bomb) == 5 :
-            webbrowser.open('https://honeypots.tech/p/HBomb/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/")
+            webbrowser.open('https://honeypots.tech/p/HBomb/help', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/help")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'hbomb.py'])
 
