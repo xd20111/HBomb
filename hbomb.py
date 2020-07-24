@@ -73,7 +73,7 @@ def checkinternet():
         res = True
     if res:
         print("\n\n\tYour Internet Speed is Slow ...")
-        print('\t\tTBomb Will Stop Now...\n\n')
+        print('\t\tHBomb Will Stop Now...\n\n')
         banner()
         exit()
 
@@ -134,14 +134,14 @@ elif int(bomb) == 2 :
 elif int(bomb) == 3 :
 	subprocess.call([sys.executable, 'smcl.py', 'call'])
 elif int(bomb) == 4 :
-            webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
+            webbrowser.open('https://honeypots.tech/p/HBomb/d/', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/d/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'hbomb.py'])
 	
 elif int(bomb) == 5 :
-        webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
-        print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
+        webbrowser.open('https://honeypots.tech/p/HBomb/', new=2)
+        print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/")
         input("\nPress Enter To Run HBomb Tool Again : ")
         subprocess.call([sys.executable, 'hbomb.py'])
 
@@ -160,13 +160,13 @@ else :
     elif int(bomb) == 3 :
         subprocess.call([sys.executable, 'smcl.py', 'call'])
     elif int(bomb) == 4 :
-            webbrowser.open('https://www.instamojo.com/@honeypots0/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://www.instamojo.com/@honeypots1/")
+            webbrowser.open('https://honeypots.tech/p/HBomb/d/', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/d/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'hbomb.py'])
     elif int(bomb) == 5 :
-            webbrowser.open('https://honey0pots.000webhostapp.com/KLS/HBomb/', new=2)
-            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honey0pots.000webhostapp.com/KLS/HBomb/")
+            webbrowser.open('https://honeypots.tech/p/HBomb/', new=2)
+            print("If You Use Mobile . May be Website not open automatically \n Visit : https://honeypots.tech/p/HBomb/")
             input("\nPress Enter To Run HBomb Tool Again : ")
             subprocess.call([sys.executable, 'hbomb.py'])
 
