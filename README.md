@@ -45,7 +45,6 @@ To use the HBomb type the following commands in Linux terminal:
 ```
 sudo apt-get install git
 sudo apt-get install python3
-sudo apt-get install pip3
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
 chmod +x hbomb.py
