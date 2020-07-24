@@ -34,9 +34,9 @@ pkg install git
 pkg install python
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
-chmod +x install 
-./install
-hbomb      #For Run The Tool
+chmod +x hbomb.py
+pip3 install -r requirements.txt
+python3 hbomb.py
 ```
 
 ### > For Linux:
@@ -48,9 +48,9 @@ sudo apt-get install python3
 sudo apt-get install pip3
 git clone https://github.com/HoneyPots0/HBomb.git
 cd HBomb
-chmod +x install 
-./install
-hbomb   #For Run The Tool
+chmod +x hbomb.py
+pip3 install -r requirements.txt
+python3 hbomb.py
 ```
 
 ### > For macOS:
