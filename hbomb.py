@@ -12,6 +12,7 @@ import urllib.request
 import urllib.parse
 import subprocess
 import webbrowser
+import requests
 
 Red = '\033[1;31m'
 Blue= '\033[1;36m'
@@ -64,6 +65,16 @@ def home():
 [6] Help
 [7] Exit 
 """)
+def active():
+    try:
+        headers={'User-Agent': 'Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'}
+        data={'value1':'1'}
+        url = "https://honeypots.tech/p/HBomb/user/index.php"
+        r = requests.get(url,params = data, headers=headers)
+        r.status_code       
+    except Exception :
+        print(r.status_code)
+        print("\tPlease Restart HBomb Tool")
 
 def checkinternet():
     res = False
@@ -115,11 +126,12 @@ if ver != verl:
     update()
 print("\n\tYour Version is Up-To-Date")
 print('\n\t     Starting HBomb...\n')
-time.sleep(4)
 
+time.sleep(1)
 clr()
 banner()
 home()
+active()
 bomb = input("Choose one options : ")
 while bomb.isdigit() != True:
     bomb = input("\aInvalid ! Choose one options  [ 1 to 6]: ")
