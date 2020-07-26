@@ -1,4 +1,4 @@
-<h1 align="center">HBomb v2020.5d</h1>
+<h1 align="center">HBomb v2020.5f</h1>
 <h5 align="right">Created By Honey Pots</h5>
 <p align="center">An open-source projetc for SMS , Call &  Mail bombing available for   Window , Linux , MacOS And Android( Termux ) </p><br>
 
