@@ -5,7 +5,7 @@
 
 ![platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20Android%20%7C%20Linux%20%7C%20MacOS-orange)
 ![Analisy](https://img.shields.io/badge/Version-2020.5f-success)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![License: GPL v3](https://img.shields.io/badge/License%202.0-Apache-blue.svg)
 <br>
 
 ## Features:
