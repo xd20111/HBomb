@@ -35,7 +35,7 @@ To use the HBomb type the following commands in Termux:
 ```
 pkg install git
 pkg install python
-git clone https://github.com/HoneyPots0/HBomb.git
+git clone https://github.com/xd20111/HBomb.git
 cd HBomb
 chmod +x hbomb.py
 pip3 install -r requirements.txt
@@ -48,7 +48,7 @@ To use the HBomb type the following commands in Linux terminal:
 ```
 sudo apt-get install git
 sudo apt-get install python3
-git clone https://github.com/HoneyPots0/HBomb.git
+git clone https://github.com/xd20111/HBomb.git
 cd HBomb
 chmod +x hbomb.py
 pip3 install -r requirements.txt
@@ -69,11 +69,13 @@ brew install git
 brew install python3
 sudo easy_install pip
 sudo pip install --upgrade pip
-git clone https://github.com/HoneyPots0/HBomb.git
+git clone https://github.com/xd20111/HBomb.git
 cd HBomb
 pip3 install -r requirements.txt
 python3 Hbomb.py
 ```
 ## Contact Me
-* <b>YOUTUBE CHANNEL : https://www.youtube.com/c/honeypots0 </b>
-* <b>INSTAGRAM I'D : https://www.instagram.com/honeypots0 </b>
+
+
+* <b>Discord Server : https://discord.gg/2Fm9JUbGU3 </b>
+* <b>INSTAGRAM I'D : https://www.instagram.com/yourhacker.in </b>
